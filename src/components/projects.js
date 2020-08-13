@@ -14,7 +14,7 @@ class Projects extends Component {
         <div className="projects-grid">
           {/* Project 1 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(../images/weatherApp.PNG) center / cover'}} >Weather App</CardTitle>
+            <CardTitle >Weather App</CardTitle>
             <CardText>
               This app allows you to see the weather for the next 5 days of any location you want. Just input the location!
             </CardText>
@@ -74,18 +74,34 @@ class Projects extends Component {
         </div>
 
       )
-    } // else if(this.state.activeTab === 1) {
-    //   return (
-    //     <div><h1>This has been created along Java</h1></div>
-    //   )
-    // } 
+    }  else if(this.state.activeTab === 1) {
+        return (
+          <div className="projects-grid">
+            {/* Project 1 */}
+            <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
+              <CardTitle style={{color: '#fff', height: '176px', background: 'url(../images/weatherApp.PNG) center / cover'}} >Weather App</CardTitle>
+              <CardText>
+                This app allows you to see the weather for the next 5 days of any location you want. Just input the location!
+              </CardText>
+              <CardActions border>
+                <Button href="https://github.com/marrv0z/Weather_App" colored>GitHub</Button>
+                <Button href = "https://marrv0z.github.io/Weather_App/" colored>Live Demo</Button>
+              </CardActions>
+              <CardMenu style={{color: '#fff'}}>
+                <IconButton name="share" />
+              </CardMenu>
+            </Card>
+          </div>
+        )
+     } 
   }
 
   render() {
     return(
       <div>
         <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
-          <Tab>HTML</Tab>
+          <Tab>HTML / JavaScript</Tab>
+          <Tab>React</Tab>
           {/* <Tab>JavaScript</Tab> */}
         </Tabs>
 
