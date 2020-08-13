@@ -152,11 +152,6 @@ function App() {
           <Link to="/">About Me<NotificationsIcon /></Link>
         </IconButton>
       </MenuItem>
-      <MenuItem>
-        <IconButton color="inherit">
-          <Link to="/trial">Trial<NotificationsIcon /></Link>
-        </IconButton>
-      </MenuItem>
     </Menu>
   );
 
@@ -193,16 +188,6 @@ function App() {
               <IconButton color="inherit">
                 <Link to="/">
                   <NotificationsIcon /> About Me
-                </Link>
-              </IconButton>
-              <IconButton color="inherit">
-                <Link to="/trial">
-                  <NotificationsIcon /> Trial
-                </Link>
-              </IconButton>
-              <IconButton color="inherit">
-                <Link to="/trial2">
-                  <NotificationsIcon /> Trial2
                 </Link>
               </IconButton>
             </div>
