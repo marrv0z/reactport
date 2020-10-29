@@ -40,13 +40,20 @@ TabPanel.propTypes = {
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    ...theme.typography.body1,
     flexGrow: 1,
     backgroundColor: theme.palette.background.paper,
     display: 'flex',
-    height: '120vh'
+    height: '120vh',
+    flexDirection: 'column',
+    
   },
   pic: {
-    width: 200
+    width: 300
+  },
+  text:{
+    ...theme.typography.h1,
+    color: "red"
   }
 }));
 
@@ -57,23 +64,42 @@ export default function About() {
   return (
     <div className={classes.root}>
       <Grid item xs>
-        <h2>Kristian M Rodriguez Villanueva</h2>
-        <p>Hi! My name is Kristian, but you can call me Kris. I am currently a sophomore at UTSA,<br></br>
-        pursueing a major in Computer Science. I am also currently working at UTSA as a<br></br>
-        Student Web Assistant, helping improve the styling in UTSA pages. I acquired my<br></br>
-        programming skills from the UTSA Coding Boot Camp, and from my participation in<br></br>
-        robotics, both in High School and College. I have expereince in HTML, CSS, JavaScript,<br></br>
-        Python, and Java. I know the basics of C and C++ due to a couple classes I've taken, <br />
-        however, I'm still waiting on a chance to using them in real life. I have acquired a passion<br />
-        for programming and look forward to learning more.
+        <h2 className={classes.text}>Kristian M Rodriguez Villanueva</h2>
+        <p>Hi! My name is Kristian, but you can call me Kris. I am currently a sophomore at UTSA, 
+          pursueing a major in Computer Science. I am also currently working at UTSA as a 
+          Student Web Assistant, helping improve the styling in UTSA pages. I acquired my 
+          programming skills from the UTSA Coding Boot Camp, from which I graduated June of 2020, 
+        and from my participation in robotics, both in High School and College. I have expereince 
+        in HTML, CSS, JavaScript, Python, and Java. I know the basics of C and C++ due to a 
+        couple classes I've taken, and I've used to program Arduinos, however, I'm still waiting 
+        on a chance to using them in real life. I have acquired a passion for programming and 
+        look forward to learning more.
         </p>
-        <p>I've created this portfolio using React.js, however there's many other technologies that I've gotten my hands into.</p>
-        <Card className={classes.pic}>
+        <p>Here is a list of technologies that I've gotten my hands into, from frameworks to databases:</p>
+        <p>
+
+        </p>
+        <ul>
+          <li>React.js (used in this portfolio)</li>
+          <li>Node.js</li>
+          <li>APIs</li>
+          <li>Express</li>
+          <li>MongoDB, Mongoose</li>
+          <li>MySQL, Sequelize</li>
+          <li>Redux</li>
+          <li>Bootstrap</li>
+          <li>Material UI</li>
+          <li>Heroku/Git/Github</li>
+          <li>CMS: WordPress and Cascade</li>
+          <li>Platforms: Visual Studio, Visual Studio Code, Arduino IDE, Android Studio</li>
+        </ul>
+        <Card>
           <CardMedia
+            className={classes.pic}
             component="img"
-            alt="Test"
+            alt="Me"
             image="me.jpeg"
-            title="Test"
+            title="me"
           />
         </Card>
         

@@ -18,6 +18,12 @@ class Projects extends Component {
           {/* Project 1 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
             <CardTitle >Weather App</CardTitle>
+            <CardMedia
+                component="img"
+                alt="Test"
+                image="weatherApp.png"
+                title="Test"
+            />
             <CardText>
               This app allows you to see the weather for the next 5 days of any location you want. Just input the location!
             </CardText>
@@ -32,7 +38,13 @@ class Projects extends Component {
 
           {/* Project 2 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(../images/bingmefood.png) center / cover'}} >Bing Me Food</CardTitle>
+            <CardTitle>Bing Me Food</CardTitle>
+            <CardMedia
+                component="img"
+                alt="Test"
+                image="bingmefood.png"
+                title="Test"
+            />
             <CardText>
             This app allows you to locate a restaurant, to get direction to such restaurant, and to see the first 5 thing in the menu of such resturant! Just type in the restaurant of your desire.
             </CardText>
@@ -47,9 +59,15 @@ class Projects extends Component {
 
           {/* Project 3 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(../images/dream.PNG) center / cover'}} >DreamStream</CardTitle>
+            <CardTitle>DreamStream</CardTitle>
+            <CardMedia
+                component="img"
+                alt="Test"
+                image="dreams.png"
+                title="Test"
+            />
             <CardText>
-            This is a blog where you can share your dreams anonymously! Just create an account and start posting your dreams.
+            This is a blog where you can share your dreams anonymously! Just create an account and start posting your dreams. A random image will be assigned to each dream your post, however, there's a bug that has not been fixed, the image links from the API used only last about a week and dissappear after that, showing no pics on posts older than a week.
             </CardText>
             <CardActions border>
               <Button href = "https://github.com/marrv0z/project2" colored>GitHub</Button>
@@ -62,7 +80,13 @@ class Projects extends Component {
 
           {/* Project 4 */}
           <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-            <CardTitle style={{color: '#fff', height: '176px', background: 'url(../images/pswgen.PNG) center / cover'}} >Password Generator</CardTitle>
+            <CardTitle >Password Generator</CardTitle>
+            <CardMedia
+                component="img"
+                alt="Test"
+                image="pswgen.png"
+                title="Test"
+            />
             <CardText>
               This app allows you to generate passwords randomly of any length less than 128 characters.
             </CardText>
@@ -82,21 +106,20 @@ class Projects extends Component {
           <div className="projects-grid">
             {/* Project 1 */}
             <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
-              <CardTitle style={{color: '#fff', height: '176px', background: 'url(../images/weatherApp.PNG) center / cover'}} >Weather App</CardTitle>
+              <CardTitle>PRITY</CardTitle>
               <CardMedia
-                
                 component="img"
                 alt="Test"
-                image="weatherApp.png"
+                image="PRITY.png"
                 title="Test"
               />
               <CardText>
-                This app allows you to see the weather for the next 5 days of any location you want. Just input the location!
+                This app allows you to play with makeup! You personalize your own avatar and try on differen makeup products from your selection. You must create an account in order to be able to play with it.
               </CardText>
 
               <CardActions border>
-                <Button href="https://github.com/marrv0z/Weather_App" colored>GitHub</Button>
-                <Button href = "https://marrv0z.github.io/Weather_App/" colored>Live Demo</Button>
+                <Button href="https://github.com/kristycode/PRITY" colored>GitHub</Button>
+                <Button href = "https://safe-savannah-83884.herokuapp.com/" colored>Live Demo</Button>
               </CardActions>
               <CardMenu style={{color: '#fff'}}>
                 <IconButton name="share" />

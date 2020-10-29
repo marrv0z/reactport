@@ -4,6 +4,8 @@ import { Grid } from 'react-mdl';
 import { Container, Tabs, Tab, Box, Typography} from '@material-ui/core';
 import PropTypes from 'prop-types';
 import { makeStyles } from '@material-ui/core/styles';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
 
 import Card from '@material-ui/core/Card';
 import CardActionArea from '@material-ui/core/CardActionArea';
@@ -77,6 +79,18 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 
+const tileData = [
+  {
+    img: 'imsge',
+    title: 'img1',
+  },
+  {
+    img: 'imga',
+    title: 'img2',
+  }
+
+];
+
 export default function Gallery() {
 
   const classes = useStyles();
@@ -95,27 +109,20 @@ export default function Gallery() {
                 <p>
                 Bacon ipsum dolor amet short loin pancetta cow leberkas picanha, buffalo capicola turkey bacon. Pork bresaola venison, strip steak swine ball tip flank sausage corned beef turkey. Tongue kielbasa landjaeger, pastrami fatback chislic chuck meatball tail. Capicola strip steak chislic sirloin sausage short loin. Short ribs shankle buffalo sausage ground round.
                 </p>
-                <Card className={classes.pic}>
-                  <CardMedia
-                    component="img"
-                    alt="Test"
-                    image="framework2.jpg"
-                    title="Test"
-                  />
-                </Card>
+                
         </TabPanel>
         <TabPanel value={value} index={1}>
           <Grid container>
             <Grid item xs={1}>
               <Container>
                 <span>High School Robotics</span>
-                <h2>GREATER ACCESS</h2>
-                <p>
-                Bacon ipsum dolor amet short loin pancetta cow leberkas picanha, buffalo capicola turkey bacon. Pork bresaola venison, strip steak swine ball tip flank sausage corned beef turkey. Tongue kielbasa landjaeger, pastrami fatback chislic chuck meatball tail. Capicola strip steak chislic sirloin sausage short loin. Short ribs shankle buffalo sausage ground round.
-                </p>
-                <p>
-                Leberkas strip steak short loin turkey meatball. Strip steak biltong leberkas sausage corned beef, tongue beef tail andouille chuck spare ribs. Bacon biltong pancetta turducken porchetta chicken. Jowl chuck cow kielbasa kevin rump shoulder pork belly jerky, pork chop venison landjaeger filet mignon. Pastrami fatback corned beef chislic pig pancetta jerky pork picanha pork chop venison buffalo. Ball tip short ribs beef, boudin spare ribs buffalo t-bone ham hock pork loin ribeye biltong. Pork   chop brisket leberkas ham boudin tenderloin, short ribs alcatra hamburger pig flank cupim.
-                </p>
+                <GridList cellHeight={200} cols={3}>
+                  {tileData.map((tile) => (
+                    <GridListTile key={tile.img} cols={tile.cols || 1}>
+                      <CardMedia component="img" image={tile.img} title={tile.title} height={200}/>
+                    </GridListTile>
+                  ))}
+                </GridList>
               </Container>
             </Grid>
           </Grid>
@@ -155,16 +162,14 @@ export default function Gallery() {
         <TabPanel value={value} index={4}>
           <Grid container>
             <Grid item xs={1}>
-              <Container>
                 <span>Hobbies Free Time</span>
-                <h2>INCREASED ENROLLMENT</h2>
-                <p>
-                Bacon ipsum dolor amet short loin pancetta cow leberkas picanha, buffalo capicola turkey bacon. Pork bresaola venison, strip steak swine ball tip flank sausage corned beef turkey. Tongue kielbasa landjaeger, pastrami fatback chislic chuck meatball tail. Capicola strip steak chislic sirloin sausage short loin. Short ribs shankle buffalo sausage ground round.
-                </p>
-                <p>
-                Leberkas strip steak short loin turkey meatball. Strip steak biltong leberkas sausage corned beef, tongue beef tail andouille chuck spare ribs. Bacon biltong pancetta turducken porchetta chicken. Jowl chuck cow kielbasa kevin rump shoulder pork belly jerky, pork chop venison landjaeger filet mignon. Pastrami fatback corned beef chislic pig pancetta jerky pork picanha pork chop venison buffalo. Ball tip short ribs beef, boudin spare ribs buffalo t-bone ham hock pork loin ribeye biltong. Pork   chop brisket leberkas ham boudin tenderloin, short ribs alcatra hamburger pig flank cupim.
-                </p>
-              </Container>
+                <GridList cellHeight={200} cols={3}>
+                  {tileData2.map((tile) => (
+                    <GridListTile key={tile.img} cols={tile.cols || 1}>
+                      <CardMedia component="img" image={tile.img} title={tile.title} height={200}/>
+                    </GridListTile>
+                  ))}
+                </GridList>
             </Grid>
           </Grid>
         </TabPanel>
