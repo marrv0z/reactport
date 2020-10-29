@@ -18,6 +18,9 @@ import MailIcon from '@material-ui/icons/Mail';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MoreIcon from '@material-ui/icons/MoreVert';
 import IconButton from '@material-ui/core/IconButton';
+import CameraAltIcon from '@material-ui/icons/CameraAlt';
+import BuildIcon from '@material-ui/icons/Build';
+import EmojiPeopleIcon from '@material-ui/icons/EmojiPeople';
 
 const useStyles = makeStyles((theme) => ({
   grow: {
@@ -134,22 +137,22 @@ function App() {
     >
       <MenuItem>
         <IconButton color="inherit">
-          <Link to="/projects">Projects <MailIcon /></Link>
+          <Link to="/projects"><BuildIcon /></Link>
         </IconButton>
       </MenuItem>
       <MenuItem>
         <IconButton color="inherit">
-          <Link to="/contact">Contact <NotificationsIcon /></Link>
+          <Link to="/contact"><MailIcon /></Link>
         </IconButton>
       </MenuItem>
       <MenuItem>
         <IconButton color="inherit">
-          <Link to="/gallery">Gallery <NotificationsIcon /></Link>
+          <Link to="/gallery"><CameraAltIcon /></Link>
         </IconButton>
       </MenuItem>
       <MenuItem>
         <IconButton color="inherit">
-          <Link to="/">About Me<NotificationsIcon /></Link>
+          <Link to="/"><EmojiPeopleIcon /></Link>
         </IconButton>
       </MenuItem>
     </Menu>
@@ -173,21 +176,21 @@ function App() {
               <IconButton color="inherit" onClick={() => {
                 window.location.href="/projects";
               }}>
-                <MailIcon/> Projects
+                <BuildIcon/> Projects
               </IconButton>
               <IconButton color="inherit">
                 <Link to="/contact">
-                  <NotificationsIcon /> Contact
+                  <MailIcon /> Contact
                 </Link>
               </IconButton>
               <IconButton color="inherit">
                 <Link to="/gallery">
-                  <NotificationsIcon /> Gallery
+                  <CameraAltIcon /> Gallery
                 </Link>
               </IconButton>
               <IconButton color="inherit">
                 <Link to="/">
-                  <NotificationsIcon /> About Me
+                  <EmojiPeopleIcon /> About Me
                 </Link>
               </IconButton>
             </div>

@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardText, CardActions, Button, CardMenu, IconButton } from 'react-mdl';
+import CardMedia from '@material-ui/core/CardMedia';
+
 
 class Projects extends Component {
   constructor(props) {
     super(props);
     this.state = { activeTab: 0 };
   }
+ 
 
   toggleCategories() {
 
@@ -80,9 +83,17 @@ class Projects extends Component {
             {/* Project 1 */}
             <Card shadow={5} style={{minWidth: '450', margin: 'auto'}}>
               <CardTitle style={{color: '#fff', height: '176px', background: 'url(../images/weatherApp.PNG) center / cover'}} >Weather App</CardTitle>
+              <CardMedia
+                
+                component="img"
+                alt="Test"
+                image="weatherApp.png"
+                title="Test"
+              />
               <CardText>
                 This app allows you to see the weather for the next 5 days of any location you want. Just input the location!
               </CardText>
+
               <CardActions border>
                 <Button href="https://github.com/marrv0z/Weather_App" colored>GitHub</Button>
                 <Button href = "https://marrv0z.github.io/Weather_App/" colored>Live Demo</Button>
